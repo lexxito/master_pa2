@@ -1,5 +1,0 @@
-influxdb
-requests
-opentsdb-py
-psycopg2-binary
-httplib2

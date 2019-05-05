@@ -1,0 +1,77 @@
+curl -d '
+{"full_first": {
+    "get_first_records": {
+      "number": "100",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "full_last": {
+    "get_last_records": {
+      "number": "100",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "sum_full": {
+    "aggregate_records": {
+      "agr": "sum",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "avg_full": {
+    "aggregate_records": {
+      "agr": "avg",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "count_full": {
+    "aggregate_records": {
+      "agr": "count",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "max_full": {
+    "aggregate_records": {
+      "agr": "max",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  },
+  "min_full": {
+    "aggregate_records": {
+      "agr": "min",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb"
+      ],
+      "number_of_experiments": 100
+    }
+  }
+}' -H "Content-Type: application/json" -X POST http://localhost:5000/experiments

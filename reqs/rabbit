@@ -1,0 +1,5 @@
+sudo rabbitmqctl add_user apalia apalia
+sudo rabbitmqctl add_vhost apalia
+sudo rabbitmqctl set_permissions -p apalia apalia ".*" ".*" ".*"
+
+

@@ -15,7 +15,6 @@ class Query:
         return self
 
     def operation(self, operator, value):
-        print("and the answer is 42")
         self.condition['operation'] = operator
         self.condition['value'] = value
         self.conditions.append(self.condition.copy())

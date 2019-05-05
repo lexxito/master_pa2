@@ -1,0 +1,104 @@
+curl -d '{
+  "part_last": {
+    "get_last_records": {
+      "number": "1",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  },
+  "avg_part": {
+    "aggregate_records": {
+      "agr": "avg",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  },
+  "sum_part": {
+    "aggregate_records": {
+      "agr": "sum",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  },
+  "count_part": {
+    "aggregate_records": {
+      "agr": "count",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  },
+  "max_part": {
+    "aggregate_records": {
+      "agr": "max",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  },
+  "min_part": {
+    "aggregate_records": {
+      "agr": "min",
+      "field": "usage",
+      "dbs": [
+        "db_postgreslq",
+        "db_influxdb",
+        "db_opentsdb"
+      ],
+      "data": {
+        "meter": "meteR0",
+        "host": "node0",
+        "device_id": "device0"
+      },
+      "number_of_experiments": 100
+    }
+  }
+}
+' -H "Content-Type: application/json" -X POST http://localhost:5000/experiments
